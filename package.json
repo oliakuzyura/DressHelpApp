@@ -1,0 +1,24 @@
+{
+  "name": "adrianwebapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "busboy-body-parser": "^0.3.2",
+    "express": "^4.17.1",
+    "galleria": "^1.6.1",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.5.1",
+    "jsdom": "^16.4.0",
+    "mustache-express": "^1.3.0",
+    "node-fetch": "^2.6.0",
+    "nodemailer": "^6.4.11"
+  }
+}
