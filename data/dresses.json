@@ -1,5 +1,5 @@
 [
   { "weather": "rain", "upcloth": "jacket", "downcloth": "pants", "accesories": "umbrella" },
   { "weather": "clouds", "upcloth": "sweater", "downcloth": "pants", "accesories": "umbrella"},
-  {"weather": "clear", "upcloth": "sweater", "downcloth": "pants", "accesories": "umbrella" }
+  {"weather": "clear", "upcloth": "t-shirt", "downcloth": "shorts", "accesories": "glasses" }
 ]

@@ -8,6 +8,30 @@ if (navigator.geolocation){
               var json = JSON.parse(rawJson);
               $('#data').append('data: ' + json.weather[0].main);
               console.log(json);
+              const weather = {
+                id: json.weather[0].id
+              }
+              showDressRequest(weather);
+              console.log(this.state.new_item);
+              
           });
       });
+  }
+
+  function showDressRequest(weather) {
+    fetch('/', {
+        method: 'POST',
+        body: JSON.stringify(weather),
+        headers: {
+      // 'Authorization': 'bearer ${token}',
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }
+   })
+     .then(function(response) {
+         return response
+       })
+     .then(function(body) {
+         console.log(body);
+       });
   }
