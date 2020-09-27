@@ -22,9 +22,22 @@ class Dress {
       })
   }
 
-  static chooseDress(weather){
-    
-  }
+  static chooseDress(weather_id){
+    weather_id = weather_id.toString();
+    console.log(weather_id);
+    return new Promise((resolve, reject) => {
+      this.getAll().then(data => {
+        if(weather_id.match(/5\d+/)){
+          resolve(data[0]);
+        }
+        else if(weather_id.match(/8\d+/)){
+          resolve(data[1]);
+        }else{
+          resolve(data[2]);
+        }
+    })
+  })
+}
 
   static insert(new_item, username) {
     if(username){

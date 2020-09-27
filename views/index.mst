@@ -13,5 +13,9 @@
 <div id="data">
     loading...
 </div>
+<div id="upcloth"></div>
+<div id="downcloth"></div>
+<div id="accesories"></div>
+<div id="weather"></div>
 </body>
 </html>

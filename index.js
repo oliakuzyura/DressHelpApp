@@ -17,21 +17,17 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 app.use(express.static(__dirname));
 
-
- 
-app.get('/', (req, res) => {
-    dress.getAll()
-    .then(data => console.log(data));
-    res
-      .status(200)
-      .render("index");
-  
+app.get('/:weather_id', (req, res) => {
+  dress.chooseDress(req.params.weather_id)
+  .then(cloth => {
+    res.send(JSON.stringify(cloth));
+  });
 });
 
-app.post('/', (req, res) => {
-  console.log(req.body);
-})
- 
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
