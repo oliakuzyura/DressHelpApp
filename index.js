@@ -28,6 +28,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/dress', (req, res) => {
+  res.render('dress');
+})
+
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
