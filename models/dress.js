@@ -30,10 +30,10 @@ class Dress {
         if(weather_id.match(/5\d+/)){
           resolve(data[0]);
         }
-        else if(weather_id.match(/8\d+/)){
-          resolve(data[1]);
-        }else{
+        else if(weather_id.match(/800/)){
           resolve(data[2]);
+        }else{
+          resolve(data[1]);
         }
     })
   })

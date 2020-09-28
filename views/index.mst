@@ -9,13 +9,14 @@
     <script type="text/javascript" src="/js/weather.js"></script>
 </head>
 <body>
-<h4>You are here:</h4>
+<div id="header">
+    <h1>DressHelp</h1>
+    <p>help to choose dress depends on weather in your location</p>
+    <a href="#" class="btn effect04" data-sm-link-text="CLICK" target="_blank"><span>START</span></a>
+</div>
+<h4 id="location"></h4>
 <div id="data">
     loading...
 </div>
-<div id="upcloth"></div>
-<div id="downcloth"></div>
-<div id="accesories"></div>
-<div id="weather"></div>
 </body>
 </html>

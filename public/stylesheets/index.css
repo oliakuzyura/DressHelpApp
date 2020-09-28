@@ -1,0 +1,27 @@
+body{
+    
+}
+
+#header{
+    padding-top: 200px;
+    padding-left: 700px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-image: url('/public/images/main.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h1{
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+p{
+
+}
