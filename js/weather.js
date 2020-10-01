@@ -15,7 +15,6 @@ if (navigator.geolocation){
               })
               $('#data').append('<br>Weather:' + json.weather[0].main);
               
-              console.log(json);
               const weather = {
                 id: json.weather[0].id
               }
@@ -26,12 +25,11 @@ if (navigator.geolocation){
   }
 
   function showDressRequest(weather) {
-    fetch('/' + weather.id)
+    fetch('/dress/' + weather.id)
      .then(function(response) {
          return response.json()
        })
      .then(function(cloth) {
-         console.log(cloth);
          $('#data').append('<br>upcloth: ' + cloth.upcloth
          +'<br>downcloth: ' + cloth.downcloth 
          +'<br>accesories: ' + cloth.accesories);
