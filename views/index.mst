@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyWeatherApp</title>
     <link rel="stylesheet" type="text/css" href="/public/stylesheets/index.css" />
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/transition.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-<div id="header">
-    <h1>DressHelp</h1>
-    <p>help to choose dress depends on weather in your location</p>
-    <a href="/dress" class="btn effect04" data-sm-link-text="CLICK"><span>START</span></a>
-</div>
+    <div id="header">
+        <h1>DressHelp</h1>
+        <p>help to choose dress depends on weather in your location</p>
+        <a href="/dress" class="btn effect04" data-sm-link-text="CLICK"><span>START</span></a>
+    </div>
 </body>
 </html>
