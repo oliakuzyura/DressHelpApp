@@ -14,5 +14,6 @@
         <p>help to choose dress depends on weather in your location</p>
         <a href="/dress" class="btn effect04" data-sm-link-text="CLICK"><span>START</span></a>
     </div>
+    <object type="image/svg+xml" data="boy_with_umbrella.svg"></object>
 </body>
 </html>
