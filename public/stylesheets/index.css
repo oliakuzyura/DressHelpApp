@@ -11,8 +11,8 @@ body{
     justify-content: flex-start;
     align-items: flex-start;
     background-image: url('/boy_with_umbrella.svg');
-    background-size: 100vw 100vh;
     background-repeat: no-repeat;
+  background-size: auto;
     color: white;
     font-family: 'Bebas Neue', sans-serif;
 }
