@@ -1,17 +1,54 @@
 #body{
+    transform: translate(600,200);
     opacity: 10;
-    animation: animate 2.5s ease-in-out infinite;
+    animation: animate 3s cubic-bezier(0,0.23,1,.1) infinite;
+  }
+
+  #cloud, #rain, #sun{
+    opacity: 0;
+    animation: clouds 3s cubic-bezier(0,0.23,1,.1) forwards;
+ }
+
+#jacket, #trousers, #cap{
+    opacity: 10;
+    animation: cloth 3s cubic-bezier(0,0.23,1,.1) forwards;
 }
+
 @keyframes animate{
     0%{
-        transform: rotate(0deg);
+    transform: rotate(0deg);
     }
     30%{
-        transform: rotate(15deg);
+    transform: rotate(15deg);
     }
     50%{
-        transform: rotate(20deg);
+    transform: rotate(20deg);
     }
     100%{
-        transform:  rotate(25deg);
+    transform:  rotate(25deg);
     }
+}
+
+@keyframes clouds{
+    0%{
+        transform: translateX(0px);
+    } 
+    30%{
+        transform: translateX(-50px);
+    }
+    100%{
+        transform: translateX(-450px);
+    }
+}
+
+@keyframes cloth{
+    0%{
+        transform: translateX(0px);
+    } 
+    30%{
+        transform: translateX(50px);
+    }
+    100%{
+        transform: translateX(450px);
+    }
+}

@@ -1,3 +1,4 @@
+window.addEventListener("load", function() {
 if (navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position) {
       
@@ -18,11 +19,18 @@ if (navigator.geolocation){
               const weather = {
                 id: json.weather[0].id
               }
+              
               showDressRequest(weather);
+
+              
+              
               
           });
       });
+
+
   }
+});
 
   function showDressRequest(weather) {
     fetch('/dress/' + weather.id)
@@ -30,8 +38,20 @@ if (navigator.geolocation){
          return response.json()
        })
      .then(function(cloth) {
+         var svgObject = document.getElementById('svg').contentDocument;
+
          $('#data').append('<br>upcloth: ' + cloth.upcloth
          +'<br>downcloth: ' + cloth.downcloth 
          +'<br>accesories: ' + cloth.accesories);
+         if(cloth.weather == 'clear'){
+            svgObject.getElementById('sun').style.opacity=1;
+            
+         }
+         else if(cloth.weather == 'rain'){
+          svgObject.getElementById('rain').style.opacity=1;
+         }
+         else{
+          svgObject.getElementById('cloud').style.opacity=1;
+         }
        });
   }
