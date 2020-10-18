@@ -15,7 +15,7 @@ if (navigator.geolocation){
                 $('#location').append(json1.results[0].components.city);
               })
               $('#data').append('<br>Weather:' + json.weather[0].main);
-              
+              console.log(json.main);
               const weather = {
                 id: json.weather[0].id
               }
@@ -43,12 +43,15 @@ if (navigator.geolocation){
          $('#data').append('<br>upcloth: ' + cloth.upcloth
          +'<br>downcloth: ' + cloth.downcloth 
          +'<br>accesories: ' + cloth.accesories);
+         cloth.weather = "rain";
          if(cloth.weather == 'clear'){
             svgObject.getElementById('sun').style.opacity=1;
             
          }
          else if(cloth.weather == 'rain'){
           svgObject.getElementById('rain').style.opacity=1;
+          svgObject.getElementById('cloud').style.opacity=1;
+          svgObject.getElementById('umbrella_1_').style.opacity=1;
          }
          else{
           svgObject.getElementById('cloud').style.opacity=1;

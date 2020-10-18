@@ -1,5 +1,4 @@
 #body{
-    transform: translate(600,200);
     opacity: 10;
     animation: animate 3s cubic-bezier(0,0.23,1,.1) infinite;
   }
@@ -7,6 +6,10 @@
   #cloud, #rain, #sun{
     opacity: 0;
     animation: clouds 3s cubic-bezier(0,0.23,1,.1) forwards;
+ }
+
+ #umbrella_1_{
+     opacity: 0;
  }
 
 #jacket, #trousers, #cap{
