@@ -1,5 +1,7 @@
 [
-  { "weather": "rain", "upcloth": "jacket", "downcloth": "pants", "accesories": "umbrella" },
-  { "weather": "clouds", "upcloth": "sweater", "downcloth": "pants", "accesories": "umbrella"},
-  {"weather": "clear", "upcloth": "t-shirt", "downcloth": "shorts", "accesories": "glasses" }
+  { "maxtemperature": 0, "mintemperature": -60, "upcloth": "winterJacket", "downcloth": "trousers", "headdress": "winterHat", "shoes": "winterBoots" , "umbrella": false, "glasses": false},
+  { "maxtemperature": 12, "mintemperature": 1, "upcloth": "jacket", "downcloth": "jeans", "headdress": "autumnHat", "shoes": "autumnBoots" , "umbrella": false, "glasses": false},
+  {"maxtemperature": 18, "mintemperature": 13, "upcloth": "sweater", "downcloth": "jeans", "headdress": "cap", "shoes": "sneakers" , "umbrella": false, "glasses": false },
+  { "maxtemperature": 24, "mintemperature": 19, "upcloth": "summerJacket", "downcloth": "shorts", "headdress": "no", "shoes": "summerSneakers" , "umbrella": false, "glasses": false},
+  { "maxtemperature": 60, "mintemperature": 24, "upcloth": "t-shirt", "downcloth": "shorts", "headdress": "cap", "shoes": "sandals" , "umbrella": false, "glasses": false}
 ]

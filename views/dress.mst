@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="/public/stylesheets/transition.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/weather.js"></script>
-    <script type="text/javascript" src="/js/weather_analysis.js"></script>
 </head>
 <body>
 <object id="svg" type="image/svg+xml" data="/boy_with_umbrella.svg"></object>
