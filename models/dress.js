@@ -19,32 +19,39 @@ class Dress {
     });
   }
 
-  static chooseDressByWeatherIdAndTemperature(weather_id, temp_min, temp_max) {
+  static chooseDressByWeatherIdAndTemperature(weather_id, temp) {
     weather_id = weather_id.toString();
-    temp_min = temp_min.toString();
-    temp_max = temp_max.toString();
-    let temperature = {temp_min, temp_max};
-    this.chooseDressByTemperature(temperature);
 
     return new Promise((resolve, reject) => {
-      this.getAll().then((data) => {
-        if (weather_id.match(/5\d+/)) {
-          resolve(data[0]);
-        } else if (weather_id.match(/800/)) {
-          resolve(data[2]);
-        } else {
-          resolve(data[1]);
-        }
-      });
+        this.chooseDressByTemperature(temp).then((data) => {
+            data = data.filter(elem => {
+                if(weather_id != 800){
+                    return elem.weather_id.find(elem => elem.toString()[0] == weather_id[0] && elem.toString() != '800')
+                }
+                else{
+                    return elem.weather_id.find(elem => elem.toString()[0] == '800')
+                }
+            })
+           resolve(data);
+        });
     });
   }
 
   static chooseDressByTemperature(temperature){
+    console.log(temperature);
+      temperature = this.fromKelvinToCelsius(temperature);
 
+    return new Promise((resolve, reject) => {
+        this.getAll().then((data) => {
+          data = data.filter(elem => temperature >= elem.mintemperature && temperature <= elem.maxtemperature);
+          resolve(data);
+        });
+      });
   }
 
   static fromKelvinToCelsius(temperature){
-
+        temperature = temperature - 273.15;
+        return temperature;
   }
 
   

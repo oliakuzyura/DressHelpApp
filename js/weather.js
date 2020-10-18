@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
 });
 
 function showDressRequest(weather, temperature) {
-  fetch("/dress/" + weather.id +'/' + temperature.temp_min + '/' + temperature.temp_max)
+  fetch("/dress/" + weather.id +'/' + temperature.temp)
     .then(function (response) {
       return response.json();
     })
